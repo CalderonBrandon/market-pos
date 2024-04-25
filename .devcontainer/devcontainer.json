@@ -19,7 +19,7 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"extensions": ["ikappas.composer"]
+			"extensions": ["ikappas.composer", "kokororin.vscode-phpfmt"]
 		}
 	}
 

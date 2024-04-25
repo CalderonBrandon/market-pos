@@ -2,10 +2,11 @@
 
 require_once "conexion.php";
 
-class DashboardModelo{
+class DashboardModelo
+{
 
-    static public function mdlGetDatosDashboard(){
-
+    public static function mdlGetDatosDashboard()
+    {
         $stmt = Conexion::conectar()->prepare('call prc_ObtenerDatosDashboard()');
 
         $stmt->execute();
@@ -13,9 +14,8 @@ class DashboardModelo{
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-
-    static public function mdlGetVentasMesActual(){
-
+    public static function mdlGetVentasMesActual()
+    {
         $stmt = Conexion::conectar()->prepare('call prc_ObtenerVentasMesActual');
 
         $stmt->execute();
@@ -23,8 +23,8 @@ class DashboardModelo{
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    static public function mdlProductosMasVendidos(){
-
+    public static function mdlProductosMasVendidos()
+    {
         $stmt = Conexion::conectar()->prepare('call prc_ListarProductosMasVendidos');
 
         $stmt->execute();
@@ -32,8 +32,8 @@ class DashboardModelo{
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    static public function mdlProductosPocoStock(){
-
+    public static function mdlProductosPocoStock()
+    {
         $stmt = Conexion::conectar()->prepare('call prc_ListarProductosPocoStock');
 
         $stmt->execute();
